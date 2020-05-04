@@ -1,0 +1,11 @@
+2020-05-03 20:05:39,985:__main__:X<Y,rerun please
+2020-05-03 20:08:06,641:__main__:dddsdsd
+Traceback (most recent call last):
+  File "C:/Python37/Learnings/Source/module_logging.py", line 21, in subs
+    raise Exception(ZeroDivisionError)
+Exception: <class 'ZeroDivisionError'>
+2020-05-03 20:11:06,694:__main__:dddsdsd
+Traceback (most recent call last):
+  File "C:/Python37/Learnings/Source/module_logging.py", line 22, in subs
+    raise Exception(ZeroDivisionError)
+Exception: <class 'ZeroDivisionError'>

@@ -1,5 +1,16 @@
 import os
 from datetime import datetime
+import logging
+
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.DEBUG)
+formatter = logging.Formatter('%(asctime)s:%(name)s:%(message)s')
+
+file_handler = logging.FileHandler('os.log')
+file_handler.setFormatter(formatter)
+logger.addHandler(file_handler)
+#
+# logging.basicConfig(filename="os.log",level=logging.DEBUG,format='%(asctime)s:%(name)s:%(message)s')
 
 print(dir(os))
 print(os.getcwd())
@@ -12,7 +23,7 @@ print(os.getcwd())
 # os.removedirs('testdir\\testdir1')
 os.rename("Module_OS.py","module_os.py")
 mtime=os.stat('module_os.py').st_mtime
-print(datetime.fromtimestamp(mtime))
+logger.debug(datetime.fromtimestamp(mtime))
 # os.makedirs('testdir\\testdir1')
 
 
